@@ -50,7 +50,7 @@ end
 
 def winner(board)
   if board.empty?
-    return false
+    return nil
   end
 
   winning_combo = won?(board)
