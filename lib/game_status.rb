@@ -34,7 +34,7 @@ def won?(board)
 end
 
 def full?(board)
-  board.none {|i| i == "   "}
+  board.none {|i| i == "   " || i == " " || i == "" || i == nil}
 end
 
 def draw?(board)
