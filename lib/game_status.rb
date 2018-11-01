@@ -28,8 +28,11 @@ def won?(board)
     x_matches = x_indices & win_combo
     if x_matches.length == 3
       return true
-    elsif y_matches.length == 3
-      return true
+    else
+      y_matches = y_indices & win_combo
+      if y_matches.length == 3
+        return true
+      end
     end
   end
 end
