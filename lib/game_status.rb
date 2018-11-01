@@ -37,6 +37,10 @@ def full?(board)
   board.none {|i| i == "   "}
 end
 
+def draw?(board)
+  !won?(board) && full?(board)
+end
+
 def method2
   x_indices, o_indices = []
   for i in 0..board.length do
