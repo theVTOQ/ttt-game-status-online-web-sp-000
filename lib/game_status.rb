@@ -16,11 +16,28 @@ WIN_COMBINATIONS = [
 ]
 
 def won?(board)
+
+  WIN_COMBINATIONS.each do |win_combo|
+    pos_1 = board[win_combo[0]]
+    pos_2 = board[win_combo[1]]
+    pos_3 = board[win_combo[2]]
+
+    x_wins = pos_1 == "X" && pos_2 == "X" && pos_3 == "X"
+    y_wins = pos_1 == "O" && pos_2 == "O" && pos_3 == "O"
+
+    if x_wins || y_wins
+      return true
+    end
+  end
+
+  return false
+
+  =begin
+  #This is method 2:
   x_indices, o_indices = []
   for i in 0..board.length do
     x_indices << i if board[i] == "X"
     o_indices << i if board[o] == "O"
-
   end
 
 
@@ -35,4 +52,5 @@ def won?(board)
       end
     end
   end
+  =end
 end
