@@ -28,7 +28,7 @@ def won?(board)
     if x_wins || y_wins
       return win_combo
     else
-      false
+      return nil
     end
   end
 
