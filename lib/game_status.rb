@@ -28,11 +28,11 @@ def won?(board)
     if x_wins || y_wins
       return win_combo
     else
-      return nil
+      false
     end
   end
 
-  return false
+  return nil
 end
 
 def full?(board)
