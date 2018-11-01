@@ -26,7 +26,7 @@ def won?(board)
     y_wins = pos_1 == "O" && pos_2 == "O" && pos_3 == "O"
 
     if x_wins || y_wins
-      return true
+      return win_combo
     end
   end
 
