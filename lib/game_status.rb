@@ -47,6 +47,9 @@ def over?(board)
 end
 
 def winner(board)
+  if board.empty
+    return falsey
+  end
   winning_combo = won?(board)
   if winning_combo != nil
     return board[winning_combo[0]]
