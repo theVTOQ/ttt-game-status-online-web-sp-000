@@ -33,7 +33,7 @@ def won?(board)
   return false
 
   =begin
-  #This is method 2:
+  This is method 2:
   x_indices, o_indices = []
   for i in 0..board.length do
     x_indices << i if board[i] == "X"
