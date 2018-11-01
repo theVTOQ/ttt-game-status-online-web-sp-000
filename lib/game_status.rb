@@ -31,6 +31,8 @@ def won?(board)
       false
     end
   end
+
+  return falsey
 end
 
 def full?(board)
@@ -47,9 +49,10 @@ def over?(board)
 end
 
 def winner(board)
-  if board.empty
+  if board.empty?
     return falsey
   end
+
   winning_combo = won?(board)
   if winning_combo != nil
     return board[winning_combo[0]]
