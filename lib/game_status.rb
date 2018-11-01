@@ -41,6 +41,11 @@ def draw?(board)
   !won?(board) && full?(board)
 end
 
+def over?(board)
+  #no need to call draw? method here- it would be redundant
+  won?(board) || full?(board)
+end
+
 def method2
   x_indices, o_indices = []
   for i in 0..board.length do
