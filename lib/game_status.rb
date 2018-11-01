@@ -31,5 +31,25 @@ def won?(board)
   end
 
   return false
+end
 
+def method2
+  x_indices, o_indices = []
+  for i in 0..board.length do
+    x_indices << i if board[i] == "X"
+    o_indices << i if board[o] == "O"
+  end
+
+
+  WIN_COMBINATIONS.each do |win_combo|
+    x_matches = x_indices & win_combo
+    if x_matches.length == 3
+      return true
+    else
+      y_matches = y_indices & win_combo
+      if y_matches.length == 3
+        return true
+      end
+    end
+  end
 end
