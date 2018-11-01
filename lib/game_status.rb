@@ -46,6 +46,10 @@ def over?(board)
   won?(board) || full?(board)
 end
 
+def winner(board)
+  board[won?(board)[0]]
+end
+
 def method2
   x_indices, o_indices = []
   for i in 0..board.length do
