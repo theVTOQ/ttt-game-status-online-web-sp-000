@@ -32,7 +32,7 @@ def won?(board)
     end
   end
 
-  return falsey
+  return false
 end
 
 def full?(board)
@@ -50,7 +50,7 @@ end
 
 def winner(board)
   if board.empty?
-    return falsey
+    return false
   end
 
   winning_combo = won?(board)
